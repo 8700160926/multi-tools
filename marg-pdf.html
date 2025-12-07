@@ -1,0 +1,12 @@
+@app.route('/merge-pdf', methods=['POST'])
+def merge_pdf():
+    files = request.files.getlist('pdf_files')
+    merger = PdfMerger()
+    for f in files:
+        filepath = os.path.join(UPLOAD_FOLDER, secure_filename(f.filename))
+        f.save(filepath)
+        merger.append(filepath)
+    output_path = os.path.join(UPLOAD_FOLDER, 'merged.pdf')
+    merger.write(output_path)
+    merger.close()
+    return send_file(output_path, as_attachment=True)
