@@ -66,7 +66,18 @@
   <div class="tool-card">
     <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
     <div class="tool-info">
-      <div class="tool-name">Merge PDF</div>
+      <div class="tool-name">Merge PDF<@app.route('/merge-pdf', methods=['POST'])
+def merge_pdf():
+    files = request.files.getlist('pdf_files')
+    merger = PdfMerger()
+    for f in files:
+        filepath = os.path.join(UPLOAD_FOLDER, secure_filename(f.filename))
+        f.save(filepath)
+        merger.append(filepath)
+    output_path = os.path.join(UPLOAD_FOLDER, 'merged.pdf')
+    merger.write(output_path)
+    merger.close()
+    return send_file(output_path, as_attachment=True)>
       <div class="tool-desc">একাধিক PDF একত্র করুন।</div>
     </div>
   </div>
