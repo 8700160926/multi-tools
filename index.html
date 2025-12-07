@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Tool PDF Website</title>
+<style>
+  :root {
+    --bg-color: #f7f8fa;
+    --card-color: #ffffff;
+    --text-color: #111827;
+    --muted-color: #6b7280;
+    --primary-color: #2563eb;
+    --border-color: #e6e7eb;
+  }
+
+  * { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; }
+
+  body { background: var(--bg-color); padding: 40px; }
+
+  h1 { text-align: center; margin-bottom: 30px; color: var(--text-color); }
+
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .tool-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .tool-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .tool-info { display: flex; flex-direction: column; }
+
+  .tool-name { font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 4px; }
+
+  .tool-desc { font-size: 14px; color: var(--muted-color); }
+</style>
+</head>
+<body>
+
+<h1>Multi-Tool PDF Website</h1>
+
+<div class="tool-grid">
+
+  <!-- PDF Tools -->
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Merge PDF</div>
+      <div class="tool-desc">একাধিক PDF একত্র করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Split PDF</div>
+      <div class="tool-desc">PDF ভাগ করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Compress PDF</div>
+      <div class="tool-desc">PDF সাইজ কমান।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Edit PDF</div>
+      <div class="tool-desc">PDF সম্পাদনা করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#E74C3C" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PDF</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">PDF to JPG</div>
+      <div class="tool-desc">PDF কে JPG এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#F1C40F"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">JPG</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">JPG to PDF</div>
+      <div class="tool-desc">JPG কে PDF এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <!-- Document Converters -->
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#2B579A" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">DOC</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">PDF to Word</div>
+      <div class="tool-desc">PDF কে Word এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#2B579A" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">DOC</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Word to PDF</div>
+      <div class="tool-desc">Word কে PDF এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <!-- Presentation Converters -->
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#D24726" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PPT</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">PDF to PowerPoint</div>
+      <div class="tool-desc">PDF কে PowerPoint এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#D24726" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">PPT</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">PowerPoint to PDF</div>
+      <div class="tool-desc">PowerPoint কে PDF এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <!-- Spreadsheet Converters -->
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#217346" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">XLS</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">PDF to Excel</div>
+      <div class="tool-desc">PDF কে Excel এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <svg class="tool-icon" viewBox="0 0 48 48"><path fill="#217346" d="M6 4h36v40H6z"/><text x="24" y="28" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">XLS</text></svg>
+    <div class="tool-info">
+      <div class="tool-name">Excel to PDF</div>
+      <div class="tool-desc">Excel কে PDF এ রূপান্তর করুন।</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
